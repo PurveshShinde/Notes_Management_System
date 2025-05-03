@@ -12,7 +12,7 @@ if (strlen($_SESSION['ocasuid']==0)) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>ONSS || Dashboard</title>
+    <title>User || Dashboard</title>
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

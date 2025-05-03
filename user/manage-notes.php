@@ -62,7 +62,7 @@ $query->execute();
                         <table class="table text-start align-middle table-bordered table-hover mb-0">
                             <thead>
                                 <tr class="text-dark">
-                                    <th scope="col">#</th>
+                                    <th scope="col">Sr. No.</th>
                                    
                                     <th scope="col">Subject</th>
                                     <th scope="col">Notes Title</th>

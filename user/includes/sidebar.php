@@ -9,7 +9,7 @@
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
                 <a href="dashboard.php" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>ONSS</h3>
+                    <h3 class="text-primary"></i>User</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
@@ -30,7 +30,7 @@ if($query->rowCount() > 0)
 foreach($results as $row)
 {               ?>
                         <h6 class="mb-0"><?php  echo $row->FullName;?></h6>
-                        <span><?php  echo $row->Email;?></span><?php $cnt=$cnt+1;}} ?>
+                        <span></span><?php $cnt=$cnt+1;}} ?>
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
