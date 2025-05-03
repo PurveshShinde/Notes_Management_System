@@ -92,7 +92,7 @@ echo "<script>alert('Email-id or Mobile Number is already exist. Please try agai
                     <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
                         <div class="d-flex align-items-center justify-content-between mb-3">
                             <a href="index.html" class="">
-                                <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>ONSS</h3>
+                                <h3 class="text-primary"></i>User/Acoount</h3>
                             </a>
                             <h3>Sign Up</h3>
                         </div>
