@@ -6,7 +6,7 @@ include('user/includes/dbconnection.php');
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
-    <title>Online Notes Sharing System | Notes</title>
+    <title>Online Notes Management System | Notes</title>
    
     <link rel="manifest" href="site.webmanifest">
    
