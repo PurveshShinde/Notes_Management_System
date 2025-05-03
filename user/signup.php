@@ -51,7 +51,7 @@ echo "<script>alert('Email-id or Mobile Number is already exist. Please try agai
 
 <head>
     
-    <title>ONSS || Signup</title>
+    <title> || Signup</title>
    
 
     <!-- Google Web Fonts -->
