@@ -58,7 +58,7 @@ if($query->rowCount() > 0)
 {
 foreach($results as $row)
 {               ?>
-                                <h1>Hello, <?php  echo $row->FirstName;?> <span>  Welcome to your panel</span></h1><?php $cnt=$cnt+1;}} ?>
+                                <h1>Hello, <?php  echo $row->FullName;?> <span>  Welcome to your panel</span></h1><?php $cnt=$cnt+1;}} ?>
                         
                     </div>
                     
