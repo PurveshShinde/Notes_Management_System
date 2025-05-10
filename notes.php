@@ -112,7 +112,7 @@ foreach($results as $row)
                                         </div>
                                        
                                     </div>
-                                    <p><table border="1"><tr>
+                                    <p><table border = "1"><tr>
   <th width="200"><strong>File 1</strong></th>
   <td colspan="3" style="text-align: center;"><a href="user/folder1/<?php echo $row->File1;?>" width="100" height="100" target="_blank" class="btn bnt-primary">Download File</a></td>
   
