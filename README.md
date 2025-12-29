@@ -3,6 +3,8 @@
 A simple, web-based system to create, manage, and organize personal notes, built with PHP and MySQL.
 
 ---
+🚀 View Live Demo https://notes-management-system.rf.gd/index.php
+---
 
 ## Table of Contents
 
