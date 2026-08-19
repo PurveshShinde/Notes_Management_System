@@ -1,26 +1,30 @@
 <?php
-// Check if we are running locally or on Render
-$isLocal = false; // Keep false for Render
+$isLocal = false; 
 
 if ($isLocal) {
-    // Local XAMPP settings
     $host = 'localhost';
     $port = '3306';
     $username = 'root';
     $password = '';
     $dbname = 'notes';
 } else {
-    // Secure Cloud settings using Render Environment Variables
-    $host = $_SERVER['DB_HOST'] ?? getenv('DB_HOST');
-    $port = $_SERVER['DB_PORT'] ?? getenv('DB_PORT') ?: '4000';
-    $username = $_SERVER['DB_USER'] ?? getenv('DB_USER');
-    $password = $_SERVER['DB_PASS'] ?? getenv('DB_PASS');
-    $dbname = $_SERVER['DB_NAME'] ?? getenv('DB_NAME');
+    // Try both methods to catch the environment variables
+    $host = getenv('DB_HOST') ?: ($_SERVER['DB_HOST'] ?? '');
+    $port = getenv('DB_PORT') ?: ($_SERVER['DB_PORT'] ?? '4000');
+    $username = getenv('DB_USER') ?: ($_SERVER['DB_USER'] ?? '');
+    $password = getenv('DB_PASS') ?: ($_SERVER['DB_PASS'] ?? '');
+    $dbname = getenv('DB_NAME') ?: ($_SERVER['DB_NAME'] ?? 'notes');
 }
+
+// TEMPORARY DEBUG: Let's see what values Render is actually passing
+echo "DEBUG HOST: [" . $host . "]<br>";
+echo "DEBUG USER: [" . $username . "]<br>";
+exit; 
 
 try {
     $dbh = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully!";
 } 
 catch (PDOException $e) {
     exit("Connection Error: " . $e->getMessage());
