@@ -1,6 +1,6 @@
 <?php
 // Check if we are running locally or on Render
-$isLocal = false; // Change to true only when testing on your own PC
+$isLocal = false; // Keep false for Render
 
 if ($isLocal) {
     // Local XAMPP settings
@@ -10,12 +10,12 @@ if ($isLocal) {
     $password = '';
     $dbname = 'notes';
 } else {
-    // Secure Cloud settings (reads from Render Environment Variables)
-    $host = getenv('DB_HOST');
-    $port = getenv('DB_PORT');
-    $username = getenv('DB_USER');
-    $password = getenv('DB_PASS');
-    $dbname = getenv('DB_NAME');
+    // Secure Cloud settings using Render Environment Variables
+    $host = $_SERVER['DB_HOST'] ?? getenv('DB_HOST');
+    $port = $_SERVER['DB_PORT'] ?? getenv('DB_PORT') ?: '4000';
+    $username = $_SERVER['DB_USER'] ?? getenv('DB_USER');
+    $password = $_SERVER['DB_PASS'] ?? getenv('DB_PASS');
+    $dbname = $_SERVER['DB_NAME'] ?? getenv('DB_NAME');
 }
 
 try {
@@ -23,6 +23,6 @@ try {
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } 
 catch (PDOException $e) {
-    exit("Error: " . $e->getMessage());
+    exit("Connection Error: " . $e->getMessage());
 }
 ?>
