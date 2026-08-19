@@ -1,3 +1,6 @@
+# Allow PHP-FPM to read Render environment variables
+RUN echo "clear_env = no" >> /usr/local/etc/php-fpm.d/www.conf
+
 # Use the official PHP image with Apache web server
 FROM php:8.2-apache
 
