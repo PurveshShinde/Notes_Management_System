@@ -1,39 +1,28 @@
 <?php
-// Toggle switch: set to TRUE for your local computer, FALSE for Render/TiDB cloud
-$isLocal = false; 
+// Check if we are running locally or on Render
+$isLocal = false; // Change to true only when testing on your own PC
 
 if ($isLocal) {
-    // ==========================================
-    // 1. LOCAL CONFIGURATION (XAMPP / Manual)
-    // ==========================================
-    define('DB_HOST','localhost');
-    define('DB_USER','root');
-    define('DB_PASS','');
-    define('DB_NAME','notes');
-
-    try {
-        $dbh = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME, DB_USER, DB_PASS, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
-    } 
-    catch (PDOException $e) {
-        exit("Error: " . $e->getMessage());
-    }
-
+    // Local XAMPP settings
+    $host = 'localhost';
+    $port = '3306';
+    $username = 'root';
+    $password = '';
+    $dbname = 'notes';
 } else {
-    // ==========================================
-    // 2. CLOUD CONFIGURATION (Render + TiDB)
-    // ==========================================
-    $host = "gateway01.ap-southeast-1.prod.aws.tidbcloud.com"; // Your TiDB Host
-    $port = "4000";                                           // TiDB Port
-    $username = "3FUL61XbsjZyFGC.root";                         // Your TiDB Username
-    $password = "IDQ4S1dfWBgJIil0";                         // Your Generated Password
-    $dbname = "notes";                                        // Database Name
+    // Secure Cloud settings (reads from Render Environment Variables)
+    $host = getenv('DB_HOST');
+    $port = getenv('DB_PORT');
+    $username = getenv('DB_USER');
+    $password = getenv('DB_PASS');
+    $dbname = getenv('DB_NAME');
+}
 
-    try {
-        $dbh = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
-        $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } 
-    catch (PDOException $e) {
-        exit("Error: " . $e->getMessage());
-    }
+try {
+    $dbh = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} 
+catch (PDOException $e) {
+    exit("Error: " . $e->getMessage());
 }
 ?>
