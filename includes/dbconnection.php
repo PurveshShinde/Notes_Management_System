@@ -24,7 +24,7 @@ if ($isLocal) {
     // ==========================================
     $host = "gateway01.ap-southeast-1.prod.aws.tidbcloud.com"; // Your TiDB Host
     $port = "4000";                                           // TiDB Port
-    $username = "YOUR_TIDB_USERNAME";                         // Your TiDB Username
+    $username = "3FUL61XbsjZyFGC.root";                         // Your TiDB Username
     $password = "IDQ4S1dfWBgJIil0";                         // Your Generated Password
     $dbname = "notes";                                        // Database Name
 
