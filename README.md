@@ -112,11 +112,23 @@ define('DB_NAME', 'notes'); // Your DB Name
 
 ## 👥 Contributors
 
+- **Purvesh Shinde** - [GitHub](https://github.com/PurveshShinde)
+- **Amey Gawade** - [GitHub](https://github.com/ameyg11)
+- **Prathamesh Ambekar** - [GitHub](https://github.com/PrathameshAmbekar15)
+
 Thanks to all the contributors who have helped improve the **Notes Management System**! 
 
-<a href="https://github.com/PurveshShinde/Notes_Management_System/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=PurveshShinde/Notes_Management_System" />
-</a>
+<div align="left">
+  <a href="https://github.com/PurveshShinde">
+    <img src="https://github.com/PurveshShinde.png" width="80px" style="border-radius: 50%;" alt="Purvesh Shinde" title="Purvesh Shinde" />
+  </a>
+  <a href="https://github.com/ameyg11">
+    <img src="https://github.com/ameyg11.png" width="80px" style="border-radius: 50%;" alt="Amey Gawade" title="Amey Gawade" />
+  </a>
+  <a href="https://github.com/PrathameshAmbekar15">
+    <img src="https://github.com/PrathameshAmbekar15.png" width="80px" style="border-radius: 50%;" alt="Prathamesh Ambekar" title="Prathamesh Ambekar" />
+  </a>
+</div>
 
 > **Note:** This project is currently completed and closed for new contributions. Feel free to fork it and use it as a starting point for your own projects!
 
