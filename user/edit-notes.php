@@ -48,6 +48,8 @@ $query->bindParam(':eid',$eid,PDO::PARAM_STR);
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
 </head>
 
 <body>

@@ -55,8 +55,8 @@
                                 <img src="assets/img/icon/icon1.svg" alt="">
                             </div>
                             <div class="features-caption">
-                                <h3>60+ UX courses</h3>
-                                <p>The automated process all your website tasks.</p>
+                                <h3>Secure Storage</h3>
+                                <p>Keep all your notes safely backed up and accessible from anywhere.</p>
                             </div>
                         </div>
                     </div>
@@ -66,8 +66,8 @@
                                 <img src="assets/img/icon/icon2.svg" alt="">
                             </div>
                             <div class="features-caption">
-                                <h3>Expert instructors</h3>
-                                <p>The automated process all your website tasks.</p>
+                                <h3>Easy Sharing</h3>
+                                <p>Quickly share your knowledge and notes with friends and colleagues.</p>
                             </div>
                         </div>
                     </div>
@@ -77,8 +77,8 @@
                                 <img src="assets/img/icon/icon3.svg" alt="">
                             </div>
                             <div class="features-caption">
-                                <h3>Life time access</h3>
-                                <p>The automated process all your website tasks.</p>
+                                <h3>Lifetime Access</h3>
+                                <p>Access your uploaded documents anytime without any restrictions.</p>
                             </div>
                         </div>
                     </div>

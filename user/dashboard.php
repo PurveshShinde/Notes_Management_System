@@ -31,6 +31,8 @@ if (strlen($_SESSION['ocasuid']==0)) {
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
 </head>
 
 <body>

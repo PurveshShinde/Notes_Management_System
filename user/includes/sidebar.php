@@ -47,7 +47,7 @@ foreach($results as $row)
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-user me-2"></i>Profile</a>
                         <div class="dropdown-menu bg-transparent border-0">
                             <a href="profile.php" class="dropdown-item">My Profile</a>
-                            <a href="setting.php" class="dropdown-item">Chnage Password</a>
+                            <a href="setting.php" class="dropdown-item">Change Password</a>
                         </div>
                     </div>
 

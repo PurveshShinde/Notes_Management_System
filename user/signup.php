@@ -72,6 +72,8 @@ echo "<script>alert('Email-id or Mobile Number is already exist. Please try agai
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
 </head>
 
 <body>

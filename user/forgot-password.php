@@ -68,6 +68,8 @@ return false;
 return true;
 }
 </script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
 </head>
 
 <body>
