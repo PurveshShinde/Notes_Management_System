@@ -11,7 +11,7 @@
 **A simple, intuitive, web-based platform to create, manage, and organize personal notes.**
 
 <br/>
-<a href="https://notes-management-system-z2wu.onrender.com/index.php">
+<a href="https://notes-management-system-beae.onrender.com/">
   <img src="https://img.shields.io/badge/🚀_Live_Demo-Click_Here-brightgreen?style=for-the-badge" alt="Live Demo" />
 </a>
 </div>
@@ -27,6 +27,22 @@
 - [Contributors](#-contributors)
 - [License](#-license)
 - [Contact](#-contact)
+
+---
+
+## 📸 Screenshots
+
+| Homepage | Notes Feed |
+| :---: | :---: |
+| <img src="assets/screenshots/index.png" width="100%" alt="Homepage"> | <img src="assets/screenshots/notes.png" width="100%" alt="Notes Feed"> |
+
+| Dashboard Panel | User Profile |
+| :---: | :---: |
+| <img src="assets/screenshots/dashboard.png" width="100%" alt="Dashboard"> | <img src="assets/screenshots/profile.png" width="100%" alt="User Profile"> |
+
+| Sign In | Sign Up |
+| :---: | :---: |
+| <img src="assets/screenshots/signin.png" width="100%" alt="Sign In Page"> | <img src="assets/screenshots/signup.png" width="100%" alt="Sign Up Page"> |
 
 ---
 

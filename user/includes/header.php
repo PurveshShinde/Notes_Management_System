@@ -26,10 +26,11 @@ foreach($results as $row)
 {               ?>
                             <span class="d-none d-lg-inline-flex"><?php  echo $row->FullName;?></span><?php $cnt=$cnt+1;}} ?>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="profile.php" class="dropdown-item">My Profile</a>
-                            <a href="setting.php" class="dropdown-item">Settings</a>
-                            <a href="logout.php" class="dropdown-item">Log Out</a>
+                        <div class="dropdown-menu dropdown-menu-end bg-white border-0 shadow-sm rounded m-0 mt-1 py-2">
+                            <a href="profile.php" class="dropdown-item py-2"><i class="fa fa-id-card me-2 text-muted"></i>My Profile</a>
+                            <a href="setting.php" class="dropdown-item py-2"><i class="fa fa-cog me-2 text-muted"></i>Settings</a>
+                            <hr class="dropdown-divider my-2">
+                            <a href="logout.php" class="dropdown-item py-2 text-danger"><i class="fa fa-sign-out-alt me-2"></i>Log Out</a>
                         </div>
                     </div>
                 </div>
