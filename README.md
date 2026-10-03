@@ -120,13 +120,13 @@ Thanks to all the contributors who have helped improve the **Notes Management Sy
 
 <div align="left">
   <a href="https://github.com/PurveshShinde">
-    <img src="https://github.com/PurveshShinde.png" width="80px" style="border-radius: 50%;" alt="Purvesh Shinde" title="Purvesh Shinde" />
+    <img src="https://wsrv.nl/?url=github.com/PurveshShinde.png&w=80&output=webp&mask=circle" alt="Purvesh Shinde" title="Purvesh Shinde" />
   </a>
   <a href="https://github.com/ameyg11">
-    <img src="https://github.com/ameyg11.png" width="80px" style="border-radius: 50%;" alt="Amey Gawade" title="Amey Gawade" />
+    <img src="https://wsrv.nl/?url=github.com/ameyg11.png&w=80&output=webp&mask=circle" alt="Amey Gawade" title="Amey Gawade" />
   </a>
   <a href="https://github.com/PrathameshAmbekar15">
-    <img src="https://github.com/PrathameshAmbekar15.png" width="80px" style="border-radius: 50%;" alt="Prathamesh Ambekar" title="Prathamesh Ambekar" />
+    <img src="https://wsrv.nl/?url=github.com/PrathameshAmbekar15.png&w=80&output=webp&mask=circle" alt="Prathamesh Ambekar" title="Prathamesh Ambekar" />
   </a>
 </div>
 
