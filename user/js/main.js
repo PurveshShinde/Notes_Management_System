@@ -205,3 +205,37 @@
     
 })(jQuery);
 
+
+
+// Dark Mode Toggle Logic
+$(document).ready(function() {
+    let darkMode = localStorage.getItem('darkMode');
+    const themeToggle = $('#theme-toggle i');
+
+    const enableDarkMode = () => {
+        $('body').addClass('dark-mode');
+        themeToggle.removeClass('fa-moon').addClass('fa-sun');
+        localStorage.setItem('darkMode', 'enabled');
+    };
+
+    const disableDarkMode = () => {
+        $('body').removeClass('dark-mode');
+        themeToggle.removeClass('fa-sun').addClass('fa-moon');
+        localStorage.setItem('darkMode', null);
+    };
+
+    if (darkMode === 'enabled') {
+        enableDarkMode();
+    }
+
+    $('#theme-toggle').on('click', function(e) {
+        e.preventDefault();
+        darkMode = localStorage.getItem('darkMode');
+        if (darkMode !== 'enabled') {
+            enableDarkMode();
+        } else {
+            disableDarkMode();
+        }
+    });
+});
+
