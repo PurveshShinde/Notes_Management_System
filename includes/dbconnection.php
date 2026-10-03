@@ -1,28 +1,25 @@
 <?php
-// Check if we are running locally or on Render
-$isLocal = false; // Change to true only when testing on your own PC
+// DB credentials with fallback for local development
+$host = getenv('DB_HOST') ?: ($_SERVER['DB_HOST'] ?? 'localhost');
+$port = getenv('DB_PORT') ?: ($_SERVER['DB_PORT'] ?? '3306');
+$username = getenv('DB_USER') ?: ($_SERVER['DB_USER'] ?? 'root');
+$password = getenv('DB_PASS') ?: ($_SERVER['DB_PASS'] ?? '');
+$dbname = getenv('DB_NAME') ?: ($_SERVER['DB_NAME'] ?? 'notes');
 
-if ($isLocal) {
-    // Local XAMPP settings
-    $host = 'localhost';
-    $port = '3306';
-    $username = 'root';
-    $password = '';
-    $dbname = 'notes';
-} else {
-    // Secure Cloud settings (reads from Render Environment Variables)
-    $host = getenv('DB_HOST');
-    $port = getenv('DB_PORT');
-    $username = getenv('DB_USER');
-    $password = getenv('DB_PASS');
-    $dbname = getenv('DB_NAME');
+$options = array(
+    PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"
+);
+
+// Enable SSL for secure connections (e.g., TiDB Serverless) if the CA bundle exists (true in Debian/Ubuntu Docker images)
+if (file_exists('/etc/ssl/certs/ca-certificates.crt')) {
+    $options[PDO::MYSQL_ATTR_SSL_CA] = '/etc/ssl/certs/ca-certificates.crt';
 }
 
 try {
-    $dbh = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES 'utf8'"));
+    $dbh = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password, $options);
     $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } 
 catch (PDOException $e) {
-    exit("Error: " . $e->getMessage());
+    exit("Connection Error: " . $e->getMessage());
 }
 ?>

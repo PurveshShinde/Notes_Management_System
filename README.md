@@ -1,90 +1,119 @@
-# Notes Management System
+<div align="center">
+  
+# 📝 Notes Management System
 
-A simple, web-based system to create, manage, and organize personal notes, built with PHP and MySQL.
+[![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net/)
+[![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+[![Status: Completed](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)](#)
 
-## Table of Contents
+**A simple, intuitive, web-based platform to create, manage, and organize personal notes.**
 
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Prerequisites](#prerequisites)
-- [Installation](#GettingStarted)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-
----
-
-## Features
-
-- User Registration and Login
-- Password Recovery
-- Create, Read, Update, Delete (CRUD) Categories
-- Create, Read, Update, Delete (CRUD) Notes
-- Note History Tracking
-- User Profile Management
-- Change Password Functionality
-- Responsive UI with Bootstrap
+<br/>
+<a href="https://notes-management-system-z2wu.onrender.com/index.php">
+  <img src="https://img.shields.io/badge/🚀_Live_Demo-Click_Here-brightgreen?style=for-the-badge" alt="Live Demo" />
+</a>
+</div>
 
 ---
 
-## Tech Stack
+## 📑 Table of Contents
+
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Prerequisites](#-prerequisites)
+- [Getting Started](#-getting-started)
+- [Contributors](#-contributors)
+- [License](#-license)
+- [Contact](#-contact)
+
+---
+
+## ✨ Features
+
+- **User Authentication:** Secure Registration, Login, and Password Recovery.
+- **Notes Management:** Create, Read, Update, Delete (CRUD) operations for notes.
+- **File Attachments:** Upload up to 4 files (images, documents, etc.) per note.
+- **Note History Tracking:** Keep track of your note updates.
+- **Profile Management:** Manage user profiles and change passwords.
+- **Responsive UI:** Built with Bootstrap to work flawlessly across devices.
+
+---
+
+## 💻 Tech Stack
 
 - **Backend:** PHP (7.x or 8.x)
-- **Database:** MySQL
-- **Frontend:** HTML, CSS, JavaScript, Bootstrap
+- **Database:** MySQL / MariaDB
+- **Frontend:** HTML5, CSS3, JavaScript, jQuery, Bootstrap
+- **Icons:** FontAwesome, Themify Icons, Flaticon
 
 ---
 
-## Prerequisites
+## 🛠️ Prerequisites
 
-- XAMPP, WAMP, or LAMP stack installed
+To run this project, you will need:
+- Local development server like **XAMPP, WAMP, or LAMP**
 - PHP enabled (version 7.0+)
 - MySQL or MariaDB
 - Web browser (Chrome, Firefox, Edge, etc.)
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
+
 Follow these steps to run the project locally:
 
-Clone the Repo
+### 1. Clone the Repository
 
-Bash
-
+```bash
 git clone https://github.com/PurveshShinde/Notes_Management_System.git
-Setup Database
+```
 
-Create a database named notes in phpMyAdmin.
+### 2. Setup the Database
 
-Import the database/notes.sql file provided in the project folder.
+- Open **phpMyAdmin** (e.g., `http://localhost/phpmyadmin/`).
+- Create a new database named `notes`.
+- Import the `database/notes.sql` file provided in the project folder into the newly created database.
 
-Configure Connection
+### 3. Configure Database Connection
 
-Open includes/config.php and update your database credentials:
+Open `user/includes/dbconnection.php` and verify/update your database credentials if necessary:
 
-PHP
+```php
+define('DB_SERVER','localhost');
+define('DB_USER','root'); // Your DB Username
+define('DB_PASS' ,'');    // Your DB Password
+define('DB_NAME', 'notes'); // Your DB Name
+```
 
-define('DB_SERVER', 'localhost');
-define('DB_USER', 'root'); // Your DB Username
-define('DB_PASS', '');     // Your DB Password
-define('DB_NAME', 'notes');
-Run
+### 4. Run the Project
 
-Move the project folder to your server root (e.g., htdocs in XAMPP).
-
-Visit http://localhost/Notes_Management_System/ in your browser.
-
-## Contributing
-Contributions are welcome! Please fork the repository and create a pull request for any features or bug fixes.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+- Move the project folder to your server root (e.g., `htdocs` for XAMPP or `www` for WAMP).
+- Visit `http://localhost/Notes_Management_System/` in your browser.
 
 ---
 
-## Contact
+## 👥 Contributors
 
-- **Author:** Purvesh Shinde.
+Thanks to all the contributors who have helped improve the **Notes Management System**! 
+
+<a href="https://github.com/PurveshShinde/Notes_Management_System/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=PurveshShinde/Notes_Management_System" />
+</a>
+
+> **Note:** This project is currently completed and closed for new contributions. Feel free to fork it and use it as a starting point for your own projects!
+
+---
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
+
+---
+
+## 📬 Contact
+
+- **Author:** Purvesh Shinde
 - **Email:** shindepurvesh007@gmail.com
-
+- **GitHub:** [PurveshShinde](https://github.com/PurveshShinde)

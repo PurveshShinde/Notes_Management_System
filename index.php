@@ -2,8 +2,8 @@
 <html class="no-js" lang="zxx">
 <head>
     <title>Online Notes Sharing System | Home Page</title>
-   
-    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
