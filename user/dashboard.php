@@ -12,7 +12,7 @@ if (strlen($_SESSION['ocasuid']==0)) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>User || Dashboard</title>
+    <title>Dashboard</title>
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,7 +46,7 @@ if (strlen($_SESSION['ocasuid']==0)) {
 
             <!-- Recent Sales Start -->
             <div class="container-fluid pt-4 px-4">
-                <div class="bg-light text-center rounded p-4">
+                <div class="bg-light rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <?php
 $uid=$_SESSION['ocasuid'];
@@ -60,7 +60,7 @@ if($query->rowCount() > 0)
 {
 foreach($results as $row)
 {               ?>
-                                <h1>Hello, <?php  echo $row->FullName;?> <span>  Welcome to your panel</span></h1><?php $cnt=$cnt+1;}} ?>
+                                <h4 class="mb-0">Welcome back, <span class="text-primary"><?php  echo $row->FullName;?></span>!</h4><?php $cnt=$cnt+1;}} ?>
                         
                     </div>
                     
@@ -68,12 +68,12 @@ foreach($results as $row)
             </div>
             <!-- Recent Sales End -->
 <div class="container-fluid pt-4 px-4">
-                <div class="row g-8">
-                    <div class="col-sm-6 col-xl-4">
+                <div class="row g-4">
+                    <div class="col-sm-6 col-xl-6">
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-file fa-6x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Total Uploaded Subject Notes</p>
+                            <i class="fa fa-folder-open fa-3x text-primary"></i>
+                            <div class="ms-3 text-end">
+                                <p class="mb-2 text-muted">Total Subject Notes</p>
                                  <?php 
                                  $uid=$_SESSION['ocasuid'];
 $sql1 ="SELECT * from  tblnotes where UserID=:uid";
@@ -83,17 +83,17 @@ $query1->execute();
 $results1=$query1->fetchAll(PDO::FETCH_OBJ);
 $totnotes=$query1->rowCount();
 ?>
-                                <h4 style="color: blue"><?php echo htmlentities($totnotes);?></h4>
-                                        <a href="manage-notes.php"><h5>View Detail</h5></a>
+                                <h3 class="text-dark mb-3"><?php echo htmlentities($totnotes);?></h3>
+                                        <a href="manage-notes.php" class="btn btn-sm btn-outline-primary">View Details</a>
                             </div>
                         </div>
                     </div>
         
-                    <div class="col-sm-6 col-xl-4">
+                    <div class="col-sm-6 col-xl-6">
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-file fa-6x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Total Uploaded Notes File</p>
+                            <i class="fa fa-file-pdf fa-3x text-primary"></i>
+                            <div class="ms-3 text-end">
+                                <p class="mb-2 text-muted">Total Uploaded Files</p>
                                  <?php 
                                  $uid=$_SESSION['ocasuid'];
 $sql1 ="SELECT 
@@ -111,8 +111,8 @@ foreach($results1 as $rows)
     $totalfiles=$rows->file+$rows->file2+$rows->file3+$rows->file4;
 }
 ?>
-                                <h4 style="color: blue"><?php echo htmlentities($totalfiles);?></h4>
-                                        <a href="manage-notes.php"><h5>View Detail</h5></a>
+                                <h3 class="text-dark mb-3"><?php echo htmlentities($totalfiles);?></h3>
+                                        <a href="manage-notes.php" class="btn btn-sm btn-outline-primary">View Details</a>
                             </div>
                         </div>
                     </div>
@@ -143,3 +143,5 @@ foreach($results1 as $rows)
 </body>
 
 </html><?php }  ?>
+
+

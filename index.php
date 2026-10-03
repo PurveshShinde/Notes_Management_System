@@ -1,3 +1,7 @@
+<?php
+session_start();
+error_reporting(0);
+?>
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>

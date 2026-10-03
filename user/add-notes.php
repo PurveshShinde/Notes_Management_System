@@ -89,7 +89,7 @@ echo "<script>window.location.href ='add-notes.php'</script>";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>ONSS || Add Notes</title>
+    <title>Add Notes</title>
   
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -214,3 +214,5 @@ $("#subject").html(data);
     <script src="js/main.js"></script>
 </body>
 </html><?php }  ?>
+
+

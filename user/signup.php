@@ -51,7 +51,7 @@ echo "<script>alert('Email-id or Mobile Number is already exist. Please try agai
 
 <head>
     
-    <title> || Signup</title>
+    <title>Signup</title>
    
 
     <!-- Google Web Fonts -->
@@ -147,3 +147,5 @@ echo "<script>alert('Email-id or Mobile Number is already exist. Please try agai
 </body>
 
 </html>
+
+

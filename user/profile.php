@@ -29,7 +29,7 @@ $query->execute();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>ONSS || Profile</title>
+    <title>Profile</title>
   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -141,3 +141,5 @@ foreach($results as $row)
     <script src="js/main.js"></script>
 </body>
 </html><?php }  ?>
+
+

@@ -275,14 +275,4 @@
     background: var(--dark);
     border-color: var(--primary);
 }
-/* Dark Mode Styles */
-body.dark-mode { background-color: #1e1e2f !important; color: #c8c8c8 !important; }
-body.dark-mode .bg-light, body.dark-mode .bg-white, body.dark-mode .sidebar { background-color: #27293d !important; }
-body.dark-mode .text-dark, body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6, body.dark-mode p, body.dark-mode span, body.dark-mode label, body.dark-mode td, body.dark-mode th { color: #e4e4e4 !important; }
-body.dark-mode .navbar, body.dark-mode .dropdown-menu { background-color: #27293d !important; border-color: #444 !important; }
-body.dark-mode .form-control, body.dark-mode .form-select { background-color: #1e1e2f !important; color: #e4e4e4 !important; border-color: #444 !important; }
-body.dark-mode table { color: #e4e4e4 !important; }
-body.dark-mode .btn-primary { background-color: #007bff; border-color: #007bff; }
-body.dark-mode .text-primary { color: #5dade2 !important; }
-body.dark-mode .dropdown-item:hover { background-color: #1e1e2f !important; color: #fff !important; }
 

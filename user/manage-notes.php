@@ -22,7 +22,7 @@ $query->execute();
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>ONSS || Manage Notes</title>
+    <title>Manage Notes</title>
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -125,3 +125,5 @@ foreach($results as $row)
 </body>
 
 </html><?php }  ?>
+
+

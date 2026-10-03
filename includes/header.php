@@ -33,8 +33,12 @@
                                                 <li><a href="notes.php">Notes</a></li>
                                                
                                                 <!-- Button -->
+                                                <?php if (strlen($_SESSION['ocasuid'])==0) { ?>
                                                 <li class="button-header margin-left "><a href="user/signup.php" class="btn">Join</a></li>
                                                 <li class="button-header"><a href="user/signin.php" class="btn btn3">Log in</a></li>
+                                                <?php } else { ?>
+                                                <li class="button-header margin-left "><a href="user/dashboard.php" class="btn">Dashboard</a></li>
+                                                <?php } ?>
                                             </ul>
                                         </nav>
                                     </div>

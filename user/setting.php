@@ -37,7 +37,7 @@ echo '<script>alert("Your current password is wrong")</script>';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>OCMMS || Profile</title>
+    <title>Settings</title>
   
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -137,3 +137,5 @@ return true;
     <script src="js/main.js"></script>
 </body>
 </html><?php }  ?>
+
+

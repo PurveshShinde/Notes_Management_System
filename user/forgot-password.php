@@ -35,7 +35,7 @@ echo "<script>alert('Email id or Mobile no is invalid');</script>";
 
 <head>
     
-    <title>ONSS || Forgot Password</title>
+    <title>Forgot Password</title>
    
 
     <!-- Google Web Fonts -->
@@ -146,3 +146,5 @@ return true;
 </body>
 
 </html>
+
+

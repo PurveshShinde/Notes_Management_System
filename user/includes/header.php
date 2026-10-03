@@ -9,11 +9,6 @@
                 
                 <div class="navbar-nav align-items-center ms-auto">
                     
-                    <div class="nav-item">
-                        <a href="#" class="nav-link" id="theme-toggle">
-                            <i class="fa fa-moon"></i>
-                        </a>
-                    </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">

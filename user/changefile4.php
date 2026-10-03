@@ -36,7 +36,7 @@ $query->bindParam(':eid',$eid,PDO::PARAM_STR);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>ONSS || Update Notes File</title>
+    <title>Update Notes File</title>
   
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -144,3 +144,5 @@ foreach($results as $row)
     <script src="js/main.js"></script>
 </body>
 </html><?php }  ?>
+
+

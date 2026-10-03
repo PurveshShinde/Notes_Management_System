@@ -30,7 +30,7 @@ echo "<script>alert('Invalid Details');</script>";
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Notes || Signin</title>
+    <title>Signin</title>
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -113,3 +113,5 @@ echo "<script>alert('Invalid Details');</script>";
 </body>
 
 </html>
+
+
