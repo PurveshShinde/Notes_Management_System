@@ -1,0 +1,13 @@
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Local configuration
+*.local
+*.local.*
+
+# Secrets and credentials
+*.pem
+*.key
+*.crt
