@@ -25,6 +25,7 @@
 - [Prerequisites](#-prerequisites)
 - [Getting Started](#-getting-started)
 - [Contributors](#-contributors)
+- [Security](#-security)
 - [License](#-license)
 - [Contact](#-contact)
 
@@ -131,6 +132,40 @@ Thanks to all the contributors who have helped improve the **Notes Management Sy
 </div>
 
 > **Note:** This project is currently completed and closed for new contributions. Feel free to fork it and use it as a starting point for your own projects!
+
+---
+
+## 🔒 Security
+
+### PHP 8.2.35 — Critical Security Patch *(applied 2026-10-23)*
+
+> **Severity:** Critical
+
+The base Docker image was previously declared as `php:8.2-apache` — a **floating tag** that does not guarantee a specific PHP patch version. Any build produced before **October 21, 2026** would have resolved to a version of PHP 8.2 **lower than 8.2.35**, which contains a critical security vulnerability patched in the [PHP 8.2.35 release](https://php.watch/versions/8.2/releases/8.2.35).
+
+#### What was changed
+
+| | Before | After |
+|---|---|---|
+| **Dockerfile base image** | `php:8.2-apache` *(floating)* | `php:8.2.35-apache` *(pinned)* |
+| **PHP version guaranteed** | Unknown / unpredictable | 8.2.35 (patched) |
+| **Build reproducibility** | Non-deterministic | Deterministic |
+
+#### What to do if you forked this project
+
+1. Update your `Dockerfile` first line to:
+   ```dockerfile
+   FROM php:8.2.35-apache
+   ```
+2. If deploying on **Render**, clear the build cache before redeploying:
+   > Dashboard → Your Service → Settings → Build & Deploy → **Clear build cache & deploy**
+3. If deploying on **Azure App Service (Linux)**, follow the [Azure guidance](https://azure.github.io/AppService/2026/10/21/php-critical-security-release-app-service-linux.html) for the same release.
+
+#### References
+
+- [PHP 8.2.35 Release Announcement](https://news-web.php.net/php.announce/510)
+- [PHP 8.2.35 Release Notes](https://php.watch/versions/8.2/releases/8.2.35)
+- [Azure App Service Advisory](https://azure.github.io/AppService/2026/10/21/php-critical-security-release-app-service-linux.html)
 
 ---
 
