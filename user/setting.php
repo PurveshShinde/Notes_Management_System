@@ -67,8 +67,27 @@ return false;
 }
 return true;
 }   
-
 </script>
+    <style>
+        .danger-zone-card {
+            border: 2px solid #dc3545 !important;
+            background: #fff5f5 !important;
+        }
+        .danger-zone-card h6 {
+            color: #dc3545;
+        }
+        #deleteAccountModal .modal-header {
+            background: #dc3545;
+            color: #fff;
+        }
+        #deleteAccountModal .modal-header .btn-close {
+            filter: invert(1);
+        }
+        #deleteAccountModal .delete-warning-icon {
+            font-size: 3rem;
+            color: #dc3545;
+        }
+    </style>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="../assets/img/favicon.ico">
 </head>
@@ -109,6 +128,17 @@ return true;
                             </form>
                         </div>
                     </div>
+
+                    <!-- Danger Zone: Delete Account -->
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="rounded h-100 p-4 danger-zone-card">
+                            <h6 class="mb-2"><i class="fa fa-exclamation-triangle me-2"></i>Danger Zone</h6>
+                            <p class="text-muted mb-3" style="font-size:0.875rem;">Permanently delete your account and all associated notes. This action <strong>cannot be undone</strong>.</p>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteAccountModal">
+                                <i class="fa fa-trash-alt me-2"></i>Delete My Account
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- Form End -->
@@ -120,6 +150,35 @@ return true;
 
 
       <?php include_once('includes/back-totop.php');?>
+    </div>
+
+    <!-- Delete Account Confirmation Modal -->
+    <div class="modal fade" id="deleteAccountModal" tabindex="-1" aria-labelledby="deleteAccountModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteAccountModalLabel"><i class="fa fa-skull-crossbones me-2"></i>Delete Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <div class="delete-warning-icon mb-3">
+                        <i class="fa fa-exclamation-triangle"></i>
+                    </div>
+                    <h6 class="fw-bold mb-2">Are you absolutely sure?</h6>
+                    <p class="text-muted mb-4">This will permanently delete your account and <strong>all your notes</strong>. You cannot recover this data after deletion.</p>
+                    <form method="post" action="delete-account.php" id="deleteAccountForm">
+                        <div class="mb-3 text-start">
+                            <label for="delete_password" class="form-label fw-semibold">Enter your password to confirm:</label>
+                            <input type="password" class="form-control border-danger" id="delete_password" name="password" placeholder="Your current password" required>
+                        </div>
+                        <div class="d-flex gap-2 justify-content-center mt-3">
+                            <button type="button" class="btn btn-secondary px-4" data-bs-dismiss="modal">Cancel</button>
+                            <button type="submit" name="confirm_delete" class="btn btn-danger px-4"><i class="fa fa-trash-alt me-1"></i>Yes, Delete Forever</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- JavaScript Libraries -->
