@@ -5,6 +5,7 @@ error_reporting(0);
 <!doctype html>
 <html class="no-js" lang="zxx">
 <head>
+    <meta name="google-site-verification" content="YrUwR4UJzaQ0GJJ7xsV0zoYfw4DnazNnSK3NB_4vCVs" />
     <title>Online Notes Sharing System | Home Page</title>
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
