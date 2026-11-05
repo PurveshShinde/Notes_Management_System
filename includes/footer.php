@@ -7,7 +7,7 @@
                     <div class="row d-flex align-items-center">
                         <div class="col-xl-12 ">
                             <div class="footer-copy-right text-center">
-                                <p>Online Notes Sharing System</p>
+                                <p>Online Notes Management System</p>
                               </div>
                           </div>
                       </div>
