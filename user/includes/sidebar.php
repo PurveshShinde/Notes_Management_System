@@ -8,8 +8,9 @@
 <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
-                <a href="../index.php" class="navbar-brand mx-4 mb-3" title="Return to Homepage">
-                    <h3 class="text-primary"><i class="fa fa-book-open me-2"></i>Workspace</h3>
+                <a href="../index.php" class="navbar-brand mx-4 mb-3 d-flex align-items-center" title="Return to Homepage">
+                    <img src="../assets/img/logo/logo.svg" alt="Notes Management System" style="width: 32px; height: 32px; margin-right: 10px;">
+                    <h4 class="text-primary mb-0" style="font-weight: 700;">Workspace</h4>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">

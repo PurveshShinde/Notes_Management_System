@@ -4,7 +4,7 @@
             <div class="preloader-inner position-relative">
                 <div class="preloader-circle"></div>
                 <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/loder.png" alt="">
+                    <img src="assets/img/logo/logo.svg" alt="Loading" style="width: 45px; height: 45px;">
                 </div>
             </div>
         </div>
@@ -18,12 +18,14 @@
                     <div class="container-fluid">
                         <div class="row align-items-center">
                             <!-- Logo -->
-                            <div class="col-xl-2 col-lg-2">
+                            <div class="col-xl-3 col-lg-3">
                                 <div class="logo">
-                                    <a href="index.php"><h3 style="color: white;font-weight: bold;">Online Notes Sharing System</h3></a>
+                                    <a href="index.php" class="d-flex align-items-center text-decoration-none">
+                                        <img src="assets/img/logo/logo-white.svg" alt="Notes Management System" style="height: 46px;">
+                                    </a>
                                 </div>
                             </div>
-                            <div class="col-xl-10 col-lg-10">
+                            <div class="col-xl-9 col-lg-9">
                                 <div class="menu-wrapper d-flex align-items-center justify-content-end">
                                     <!-- Main-menu -->
                                     <div class="main-menu d-none d-lg-block">

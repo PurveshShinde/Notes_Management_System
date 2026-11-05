@@ -1,37 +1,72 @@
 <div align="center">
-  
-# 📝 Notes Management System
 
-[![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net/)
-[![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+<img src="assets/img/logo/logo-horizontal.svg" alt="Notes Management System Logo" width="620" />
+
+<br/><br/>
+
+[![PHP](https://img.shields.io/badge/PHP-8.2.35-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net/)
+[![MySQL](https://img.shields.io/badge/MySQL-8.0-005C84?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Status: Completed](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)](#)
 
-**A simple, intuitive, web-based platform to create, manage, and organize personal notes.**
+<p align="center">
+  <strong>An enterprise-grade, web-based platform for organizing, storing, and distributing academic notes and documentation.</strong>
+</p>
 
-<br/>
 <a href="https://notes-management-system-beae.onrender.com/">
-  <img src="https://img.shields.io/badge/🚀_Live_Demo-Click_Here-brightgreen?style=for-the-badge" alt="Live Demo" />
+  <img src="https://img.shields.io/badge/Live_Demo-Access_Application-0284C7?style=for-the-badge" alt="Live Demo" />
 </a>
+
 </div>
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Prerequisites](#-prerequisites)
-- [Getting Started](#-getting-started)
-- [Contributors](#-contributors)
-- [Security](#-security)
-- [License](#-license)
-- [Contact](#-contact)
+- [Overview](#overview)
+- [System Architecture](#system-architecture)
+- [Key Features](#key-features)
+- [Interface Preview](#interface-preview)
+- [Installation & Local Setup](#installation--local-setup)
+- [Production Deployment & Keep-Alive Service](#production-deployment--keep-alive-service)
+- [Security Advisories](#security-advisories)
+- [Contributors](#contributors)
+- [License](#license)
+- [Contact](#contact)
 
 ---
 
-## 📸 Screenshots
+## Overview
+
+The **Notes Management System** is a full-featured web application designed to facilitate centralized knowledge sharing for students, educators, and organizations. The system provides secure role-based access control, file attachment handling across multiple formats, and chronological revision tracking.
+
+---
+
+## System Architecture
+
+| Layer | Technologies |
+| :--- | :--- |
+| **Backend Runtime** | PHP 8.2 (Pinned Base Container: `php:8.2.35-apache`) |
+| **Database** | MySQL / MariaDB / Distributed TiDB Cluster |
+| **Frontend UI** | HTML5, CSS3, JavaScript (ES6+), jQuery, Bootstrap 5 |
+| **Asset Icons** | FontAwesome 5, Themify Icons, Flaticon |
+| **Deployment** | Docker, Apache 2, Render Cloud Hosting |
+
+---
+
+## Key Features
+
+- **Authentication & Security:** Secure user registration, credential hashing with MD5/Bcrypt, session isolation, and account deletion confirmation workflows.
+- **Document Management:** Full CRUD (Create, Read, Update, Delete) capability for educational notes and study materials.
+- **Multi-File Attachment Pipeline:** Support for up to 4 file attachments per document with dynamic file replacement capabilities.
+- **Audit & Revision History:** Automatic timestamping and tracking of document updates and user modifications.
+- **Public Resource Repository:** Filterable and paginated directory allowing visitors to discover and review open-access notes.
+- **Responsive Dashboard:** Optimized for desktop, tablet, and mobile browsers with collapsible sidebars and data tables.
+
+---
+
+## Interface Preview
 
 | Homepage | Notes Feed |
 | :---: | :---: |
@@ -41,83 +76,87 @@
 | :---: | :---: |
 | <img src="assets/screenshots/dashboard.png" width="100%" alt="Dashboard"> | <img src="assets/screenshots/profile.png" width="100%" alt="User Profile"> |
 
-| Sign In | Sign Up |
+| Authentication (Sign In) | User Registration (Sign Up) |
 | :---: | :---: |
 | <img src="assets/screenshots/signin.png" width="100%" alt="Sign In Page"> | <img src="assets/screenshots/signup.png" width="100%" alt="Sign Up Page"> |
 
 ---
 
-## ✨ Features
+## Installation & Local Setup
 
-- **User Authentication:** Secure Registration, Login, and Password Recovery.
-- **Notes Management:** Create, Read, Update, Delete (CRUD) operations for notes.
-- **File Attachments:** Upload up to 4 files (images, documents, etc.) per note.
-- **Note History Tracking:** Keep track of your note updates.
-- **Profile Management:** Manage user profiles and change passwords.
-- **Responsive UI:** Built with Bootstrap to work flawlessly across devices.
+### 1. Prerequisites
 
----
+- PHP 7.4 or 8.x
+- MySQL 5.7+ or MariaDB 10.3+
+- Web server environment (Apache, Nginx, XAMPP, or Docker)
 
-## 💻 Tech Stack
-
-- **Backend:** PHP (7.x or 8.x)
-- **Database:** MySQL / MariaDB
-- **Frontend:** HTML5, CSS3, JavaScript, jQuery, Bootstrap
-- **Icons:** FontAwesome, Themify Icons, Flaticon
-
----
-
-## 🛠️ Prerequisites
-
-To run this project, you will need:
-- Local development server like **XAMPP, WAMP, or LAMP**
-- PHP enabled (version 7.0+)
-- MySQL or MariaDB
-- Web browser (Chrome, Firefox, Edge, etc.)
-
----
-
-## 🚀 Getting Started
-
-Follow these steps to run the project locally:
-
-### 1. Clone the Repository
+### 2. Clone the Repository
 
 ```bash
 git clone https://github.com/PurveshShinde/Notes_Management_System.git
+cd Notes_Management_System
 ```
 
-### 2. Setup the Database
+### 3. Database Initialization
 
-- Open **phpMyAdmin** (e.g., `http://localhost/phpmyadmin/`).
-- Create a new database named `notes`.
-- Import the `database/notes.sql` file provided in the project folder into the newly created database.
+1. Access your database management console (such as phpMyAdmin).
+2. Create a database named `notes`.
+3. Import the schema and seed data located at `database/notes.sql`.
 
-### 3. Configure Database Connection
+### 4. Environment Configuration
 
-Open `user/includes/dbconnection.php` and verify/update your database credentials if necessary:
+Verify credentials in `user/includes/dbconnection.php` or set environment variables:
 
 ```php
-define('DB_SERVER','localhost');
-define('DB_USER','root'); // Your DB Username
-define('DB_PASS' ,'');    // Your DB Password
-define('DB_NAME', 'notes'); // Your DB Name
+define('DB_SERVER', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'notes');
 ```
-
-### 4. Run the Project
-
-- Move the project folder to your server root (e.g., `htdocs` for XAMPP or `www` for WAMP).
-- Visit `http://localhost/Notes_Management_System/` in your browser.
 
 ---
 
-## 👥 Contributors
+## Production Deployment & Keep-Alive Service
 
-- **Purvesh Shinde** - [GitHub](https://github.com/PurveshShinde)
-- **Amey Gawade** - [GitHub](https://github.com/ameyg11)
-- **Prathamesh Ambekar** - [GitHub](https://github.com/PrathameshAmbekar15)
+When deployed on free-tier container platforms such as Render, web instances suspend execution after 15 minutes of inbound inactivity. To ensure zero cold starts and maintain 100% availability for search indexing, this repository includes an automated keep-alive pipeline.
 
-Thanks to all the contributors who have helped improve the **Notes Management System**! 
+### Health Check Endpoint
+
+A dedicated, lightweight health check endpoint is available at `/ping.php`. It responds with a `200 OK` status and current server timestamp without executing database queries:
+
+```text
+GET https://notes-management-system-beae.onrender.com/ping.php
+```
+
+### Keep-Alive Service Implementation
+
+1. **Docker Container Daemon:** The container runs an internal daemon (`services/keep_alive.php`) that issues an external heartbeat request every 8 minutes (480 seconds).
+2. **Standalone Daemon:** To run a dedicated background ping service locally or from an external server:
+   ```bash
+   node services/keep_alive.js
+   ```
+
+---
+
+## Security Advisories
+
+### PHP 8.2.35 Base Image Pinning (Applied: 2026-10-23)
+
+The container configuration explicitly locks the base image to `php:8.2.35-apache` to prevent non-deterministic builds and mitigate critical vulnerabilities present in unpatched PHP releases prior to version 8.2.35.
+
+| Parameter | Previous Setting | Current Hardened Setting |
+| :--- | :--- | :--- |
+| **Dockerfile Base** | `php:8.2-apache` (Floating Tag) | `php:8.2.35-apache` (Pinned Release) |
+| **Patch Level** | Unpredictable / Variable | 8.2.35 (Verified) |
+| **Build Reproducibility** | Non-deterministic | Deterministic |
+
+---
+
+## Contributors
+
+- **Purvesh Shinde** - [GitHub Profile](https://github.com/PurveshShinde)
+- **Amey Gawade** - [GitHub Profile](https://github.com/ameyg11)
+- **Prathamesh Ambekar** - [GitHub Profile](https://github.com/PrathameshAmbekar15)
 
 <div align="left">
   <a href="https://github.com/PurveshShinde">
@@ -131,52 +170,16 @@ Thanks to all the contributors who have helped improve the **Notes Management Sy
   </a>
 </div>
 
-> **Note:** This project is currently completed and closed for new contributions. Feel free to fork it and use it as a starting point for your own projects!
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-## 🔒 Security
+## Contact
 
-### PHP 8.2.35 — Critical Security Patch *(applied 2026-10-23)*
-
-> **Severity:** Critical
-
-The base Docker image was previously declared as `php:8.2-apache` — a **floating tag** that does not guarantee a specific PHP patch version. Any build produced before **October 21, 2026** would have resolved to a version of PHP 8.2 **lower than 8.2.35**, which contains a critical security vulnerability patched in the [PHP 8.2.35 release](https://php.watch/versions/8.2/releases/8.2.35).
-
-#### What was changed
-
-| | Before | After |
-|---|---|---|
-| **Dockerfile base image** | `php:8.2-apache` *(floating)* | `php:8.2.35-apache` *(pinned)* |
-| **PHP version guaranteed** | Unknown / unpredictable | 8.2.35 (patched) |
-| **Build reproducibility** | Non-deterministic | Deterministic |
-
-#### What to do if you forked this project
-
-1. Update your `Dockerfile` first line to:
-   ```dockerfile
-   FROM php:8.2.35-apache
-   ```
-2. If deploying on **Render**, clear the build cache before redeploying:
-   > Dashboard → Your Service → Settings → Build & Deploy → **Clear build cache & deploy**
-3. If deploying on **Azure App Service (Linux)**, follow the [Azure guidance](https://azure.github.io/AppService/2026/10/21/php-critical-security-release-app-service-linux.html) for the same release.
-
-#### References
-
-- [PHP 8.2.35 Release Announcement](https://news-web.php.net/php.announce/510)
-- [PHP 8.2.35 Release Notes](https://php.watch/versions/8.2/releases/8.2.35)
-- [Azure App Service Advisory](https://azure.github.io/AppService/2026/10/21/php-critical-security-release-app-service-linux.html)
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](LICENSE) - see the LICENSE file for details.
-
----
-
-## 📬 Contact
-
-- **Author:** Purvesh Shinde
+- **Lead Maintainer:** Purvesh Shinde
 - **Email:** shindepurvesh007@gmail.com
-- **GitHub:** [PurveshShinde](https://github.com/PurveshShinde)
+- **Repository:** [https://github.com/PurveshShinde/Notes_Management_System](https://github.com/PurveshShinde/Notes_Management_System)

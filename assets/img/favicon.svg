@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="favSpine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    <filter id="favDrop" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0F172A" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Back Stack Pages -->
+  <rect x="135" y="60" width="260" height="350" rx="26" fill="#94A3B8" opacity="0.4" transform="rotate(7 265 235)"/>
+  <rect x="115" y="65" width="260" height="350" rx="26" fill="#64748B" opacity="0.65" transform="rotate(3.5 245 240)"/>
+
+  <!-- Main Front Page with Drop Shadow -->
+  <g filter="url(#favDrop)">
+    <path d="M 90 70 C 90 55.64 101.64 44 116 44 L 270 44 L 370 144 L 370 416 C 370 430.36 358.36 442 344 442 L 116 442 C 101.64 442 90 430.36 90 416 Z" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="3"/>
+    <!-- Folded Corner Flap -->
+    <path d="M 270 44 L 270 120 C 270 133.25 280.75 144 294 144 L 370 144 Z" fill="#CBD5E1"/>
+  </g>
+
+  <!-- Left Spine Accent -->
+  <path d="M 90 70 C 90 55.64 101.64 44 116 44 L 132 44 L 132 442 L 116 442 C 101.64 442 90 430.36 90 416 Z" fill="url(#favSpine)"/>
+
+  <!-- Content Note Lines -->
+  <rect x="165" y="195" width="160" height="18" rx="9" fill="#64748B"/>
+  <rect x="165" y="240" width="160" height="18" rx="9" fill="#94A3B8"/>
+  <rect x="165" y="285" width="115" height="18" rx="9" fill="#CBD5E1"/>
+
+  <!-- Checkmark Seal -->
+  <g transform="translate(275, 330)">
+    <circle cx="55" cy="55" r="50" fill="url(#favSpine)"/>
+    <circle cx="55" cy="55" r="47" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.6"/>
+    <path d="M 38 56 L 50 68 L 74 44" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

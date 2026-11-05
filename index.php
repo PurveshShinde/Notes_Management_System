@@ -3,12 +3,61 @@ session_start();
 error_reporting(0);
 ?>
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Primary High-Intent SEO Meta -->
+    <title>Online Notes Sharing System • Free Study Notes &amp; Document Organizer</title>
+    <meta name="description" content="Create, organize, and share study notes and educational documents online for free. Access curated student notes, lecture materials, and multi-file attachments." />
+
+    <!-- High-Intent Search Keywords -->
+    <meta name="keywords" content="notes management system, online notes sharing, study notes platform, free notes organizer, student notes sharing, share study materials, lecture notes online, document management web app, college notes download" />
+
+    <!-- Google Site Verification & Crawling Directives -->
     <meta name="google-site-verification" content="YrUwR4UJzaQ0GJJ7xsV0zoYfw4DnazNnSK3NB_4vCVs" />
-    <title>Online Notes Sharing System | Home Page</title>
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://notes-management-system-beae.onrender.com/" />
+
+    <!-- Open Graph / Facebook (High-CTR Rich Previews) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://notes-management-system-beae.onrender.com/" />
+    <meta property="og:site_name" content="Notes Management System" />
+    <meta property="og:title" content="Online Notes Sharing System • Free Study Notes &amp; Document Organizer" />
+    <meta property="og:description" content="Create, organize, and share study notes and educational documents online for free. Secure storage with multi-file attachment support." />
+    <meta property="og:image" content="https://notes-management-system-beae.onrender.com/assets/screenshots/index.png" />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Online Notes Sharing System • Free Study Notes Organizer" />
+    <meta name="twitter:description" content="Create, organize, and share study notes and educational documents online for free." />
+    <meta name="twitter:image" content="https://notes-management-system-beae.onrender.com/assets/screenshots/index.png" />
+
+    <!-- Google Rich Snippet Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Notes Management System",
+      "url": "https://notes-management-system-beae.onrender.com/",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "A web-based platform to create, manage, organize, and share educational notes and study materials with file attachments."
+    }
+    </script>
+
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
 
     <!-- CSS here -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">

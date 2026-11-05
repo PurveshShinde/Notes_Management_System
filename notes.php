@@ -4,10 +4,39 @@ error_reporting(0);
 include('user/includes/dbconnection.php');
 ?>
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="en">
 <head>
-    <title>Online Notes Management System | Notes</title>
-   
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Primary SEO Meta -->
+    <title>Featured Study Notes &amp; Documents | Notes Management System</title>
+    <meta name="description" content="Browse and download free study notes, lecture materials, and educational documents shared by students across various subjects and topics." />
+    <meta name="keywords" content="browse study notes, subject notes, student study materials, download lecture notes, free educational documents, online notes sharing" />
+
+    <!-- Googlebot & Indexing Directives -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://notes-management-system-beae.onrender.com/notes.php" />
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://notes-management-system-beae.onrender.com/notes.php" />
+    <meta property="og:site_name" content="Notes Management System" />
+    <meta property="og:title" content="Featured Study Notes &amp; Documents | Notes Management System" />
+    <meta property="og:description" content="Browse and download free study notes, lecture materials, and educational documents shared by students." />
+    <meta property="og:image" content="https://notes-management-system-beae.onrender.com/assets/screenshots/notes.png" />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Featured Study Notes &amp; Documents" />
+    <meta name="twitter:description" content="Browse and download free study notes, lecture materials, and educational documents shared by students." />
+    <meta name="twitter:image" content="https://notes-management-system-beae.onrender.com/assets/screenshots/notes.png" />
+
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
    
     <!-- CSS here -->
@@ -25,8 +54,6 @@ include('user/includes/dbconnection.php');
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 </head>
 
 <body>

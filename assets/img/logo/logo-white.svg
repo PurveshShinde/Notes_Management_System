@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 60" width="100%" height="100%">
+  <defs>
+    <linearGradient id="whiteLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .brand-title {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 700;
+      font-size: 20px;
+      fill: #FFFFFF;
+      letter-spacing: -0.3px;
+    }
+    .brand-sub {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 500;
+      font-size: 10px;
+      fill: #94A3B8;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+  </style>
+
+  <!-- Icon (Left) -->
+  <g transform="translate(6, 6)">
+    <!-- Document -->
+    <path d="M 6 4 C 6 2.5 7.2 1 9 1 L 28 1 L 38 11 L 38 43 C 38 44.5 36.8 46 35 46 L 9 46 C 7.2 46 6 44.5 6 43 Z" fill="#FFFFFF"/>
+    <!-- Folded Flap -->
+    <path d="M 28 1 L 28 10 C 28 11 29 11 30 11 L 38 11 Z" fill="#CBD5E1"/>
+    <!-- Spine -->
+    <path d="M 6 4 C 6 2.5 7.2 1 9 1 L 11 1 L 11 46 L 9 46 C 7.2 46 6 44.5 6 43 Z" fill="url(#whiteLogoGrad)"/>
+    <!-- Text Lines -->
+    <rect x="15" y="16" width="16" height="3" rx="1.5" fill="#64748B"/>
+    <rect x="15" y="22" width="16" height="3" rx="1.5" fill="#94A3B8"/>
+    <rect x="15" y="28" width="10" height="3" rx="1.5" fill="#CBD5E1"/>
+    <!-- Badge Dot -->
+    <circle cx="34" cy="36" r="6" fill="url(#whiteLogoGrad)"/>
+    <path d="M 31 36 L 33 38 L 37 34" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Brand Typography -->
+  <text x="56" y="28" class="brand-title">NotesSystem</text>
+  <text x="56" y="44" class="brand-sub">Management Platform</text>
+</svg>
+

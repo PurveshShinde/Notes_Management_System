@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+Allow: /ping.php
+Allow: /notes.php
+Allow: /assets/
+Allow: /user/signin.php
+Allow: /user/signup.php
+
+# Disallow private user dashboard and internal scripts
+Disallow: /user/dashboard.php
+Disallow: /user/manage-notes.php
+Disallow: /user/add-notes.php
+Disallow: /user/edit-notes.php
+Disallow: /user/changefile*.php
+Disallow: /user/profile.php
+Disallow: /user/setting.php
+Disallow: /user/delete-account.php
+Disallow: /user/logout.php
+Disallow: /user/forgot-password.php
+Disallow: /includes/
+Disallow: /database/
+
+# Sitemap location
+Sitemap: https://notes-management-system-beae.onrender.com/sitemap.xml
+
