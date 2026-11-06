@@ -74,8 +74,8 @@ echo "<script>alert('Invalid Details');</script>";
                 <div class="col-12 col-sm-8 col-md-6 col-lg-5 col-xl-4">
                     <div class="bg-light rounded p-4 p-sm-5 my-4 mx-3">
                         <div class="d-flex align-items-center justify-content-between mb-3">
-                            <a href="index.html" class="">
-                                <h3 class="text-primary"></i>User/Account</h3>
+                            <a href="/" class="">
+                                <h3 class="text-primary">User/Account</h3>
                             </a>
                             <h3>Sign In</h3>
                         </div>
@@ -94,7 +94,7 @@ echo "<script>alert('Invalid Details');</script>";
                         <button type="submit" class="btn btn-primary py-3 w-100 mb-4" name="login">Sign In</button>
                         </form>
                         <div class="d-flex align-items-center justify-content-between mb-4">
-                            <a href="../index.php">Home Page!!</a>
+                            <a href="/">Home Page!!</a>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <a href="signup.php">Create an account!!</a>

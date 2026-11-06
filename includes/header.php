@@ -20,7 +20,7 @@
                             <!-- Logo -->
                             <div class="col-xl-3 col-lg-3">
                                 <div class="logo">
-                                    <a href="index.php" class="d-flex align-items-center text-decoration-none">
+                                    <a href="/" class="d-flex align-items-center text-decoration-none">
                                         <img src="assets/img/logo/logo-white.svg" alt="Notes Management System" style="height: 46px;">
                                     </a>
                                 </div>
@@ -31,7 +31,7 @@
                                     <div class="main-menu d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">                                                                                          
-                                                <li class="active" ><a href="index.php">Home</a></li>
+                                                <li class="active"><a href="/">Home</a></li>
                                                 <li><a href="notes.php">Notes</a></li>
                                                
                                                 <!-- Button -->
