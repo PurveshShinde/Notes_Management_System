@@ -9,49 +9,12 @@ error_reporting(0);
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Primary High-Intent SEO Meta -->
-    <title>Online Notes Management System • Free Study Notes &amp; Document Organizer</title>
-    <meta name="description" content="Create, organize, and manage study notes and educational documents online for free. Access curated student notes, lecture materials, and multi-file attachments." />
+    <title>Online Notes Management System</title>
+    <meta name="description" content="Online Notes Management System" />
 
-    <!-- High-Intent Search Keywords -->
-    <meta name="keywords" content="online notes management system, notes management system, study notes platform, free notes organizer, student notes sharing, share study materials, lecture notes online, document management web app, college notes download" />
-
-    <!-- Google Site Verification & Crawling Directives -->
-    <meta name="google-site-verification" content="YrUwR4UJzaQ0GJJ7xsV0zoYfw4DnazNnSK3NB_4vCVs" />
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-    <link rel="canonical" href="https://notes-management-system-beae.onrender.com/" />
-
-    <!-- Open Graph / Facebook (High-CTR Rich Previews) -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://notes-management-system-beae.onrender.com/" />
-    <meta property="og:site_name" content="Notes Management System" />
-    <meta property="og:title" content="Online Notes Management System • Free Study Notes &amp; Document Organizer" />
-    <meta property="og:description" content="Create, organize, and manage study notes and educational documents online for free. Secure storage with multi-file attachment support." />
-    <meta property="og:image" content="https://notes-management-system-beae.onrender.com/assets/screenshots/index.png" />
-
-    <!-- Twitter / X Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Online Notes Management System • Free Study Notes Organizer" />
-    <meta name="twitter:description" content="Create, organize, and manage study notes and educational documents online for free." />
-    <meta name="twitter:image" content="https://notes-management-system-beae.onrender.com/assets/screenshots/index.png" />
-
-    <!-- Google Rich Snippet Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Notes Management System",
-      "url": "https://notes-management-system-beae.onrender.com/",
-      "applicationCategory": "EducationalApplication",
-      "operatingSystem": "All",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "description": "A web-based platform to create, manage, organize, and share educational notes and study materials with file attachments."
-    }
-    </script>
+    <!-- De-indexing Directives: Prevent search engine crawling and indexing -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
 
     <!-- Favicon & App Icons -->
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">

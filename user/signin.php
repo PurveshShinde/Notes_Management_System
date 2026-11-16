@@ -35,8 +35,9 @@ echo "<script>alert('Invalid Details');</script>";
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sign In | Notes Management System</title>
     <meta name="description" content="Sign in to your Notes Management System account to manage, upload, and organize your study notes and educational materials." />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://notes-management-system-beae.onrender.com/user/signin.php" />
+    <!-- De-indexing Directives -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet" />
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

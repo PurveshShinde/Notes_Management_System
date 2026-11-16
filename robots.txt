@@ -1,12 +1,3 @@
-# Allow all search engine crawlers and Googlebot-Image to crawl the site and favicons
+# Block all web crawlers and search engine bots from crawling and indexing the site
 User-agent: *
-Allow: /
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Googlebot-Image
-Allow: /
-
-# Sitemap location
-Sitemap: https://notes-management-system-beae.onrender.com/sitemap.xml
+Disallow: /

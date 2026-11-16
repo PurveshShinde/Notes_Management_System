@@ -55,8 +55,9 @@ echo "<script>alert('Email-id or Mobile Number is already exist. Please try agai
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Create Free Account | Notes Management System</title>
     <meta name="description" content="Sign up for a free Notes Management System account. Create, organize, and securely share your study notes and educational resources." />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://notes-management-system-beae.onrender.com/user/signup.php" />
+    <!-- De-indexing Directives -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
