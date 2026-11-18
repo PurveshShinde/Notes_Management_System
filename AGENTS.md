@@ -81,5 +81,5 @@ When modifying meta descriptions or social sharing cards:
 * **Lead Maintainer:** Purvesh Shinde
 * **Production URL:** `https://notes-management-system-beae.onrender.com/`
 * **Local Web Server:** Apache / Docker container exposed on port 80 (or `8080` host mapping)
-* **Keep-Alive Interval:** 480 seconds (8 minutes)
+* **Keep-Alive Daemon:** Decommissioned / Disabled (conserves Render 750h free tier quota)
 

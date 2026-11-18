@@ -1,6 +1,6 @@
 <?php
 /**
- * Lightweight health check & keep-alive ping endpoint.
+ * Lightweight health check probe endpoint.
  * Returns 200 OK without opening database connections.
  */
 header('Content-Type: application/json; charset=utf-8');

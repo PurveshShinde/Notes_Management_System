@@ -13,7 +13,6 @@ Before beginning, ensure your environment meets the minimum version requirements
 * **Database:** MySQL `8.0+` or MariaDB `10.4+` (or compatible cloud database like TiDB)
 * **Web Server:** Apache `2.4+`, Nginx, XAMPP / WampServer, or Docker
 * **Git:** Version control client for cloning the repository
-* *(Optional)* **Node.js:** `18.x+` (only required if running the standalone JavaScript keep-alive worker)
 
 ---
 
@@ -148,29 +147,18 @@ Then visit `http://localhost:8000/` in your browser.
 
 ---
 
-## 4. Keep-Alive Service Setup
+## 4. Health Check Probe Setup
 
-Render free-tier hosting suspends web instances after 15 minutes of inactivity. To ensure zero cold starts and 100% crawl availability, use the built-in keep-alive daemons.
+The application includes a lightweight zero-DB health check probe at `/ping.php` that responds with HTTP `200 OK` for deployment verification and uptime monitoring:
 
-### Verify Health Endpoint
-First, check that the lightweight health check probe responds with HTTP `200 OK`:
 ```bash
 curl -i https://notes-management-system-beae.onrender.com/ping.php
 # or locally:
 curl -i http://localhost:8080/ping.php
 ```
 
-### Option A: PHP Daemon (Integrated in Docker)
-The Docker container automatically launches `services/keep_alive.php` via `entrypoint.sh`. To run it manually:
-```bash
-KEEP_ALIVE_URL="https://notes-management-system-beae.onrender.com/ping.php" php services/keep_alive.php
-```
-
-### Option B: Node.js Standalone Daemon
-If you prefer running a background worker from a separate server or continuous integration environment:
-```bash
-node services/keep_alive.js
-```
+> [!NOTE]
+> Background keep-alive polling daemons have been disabled to preserve Render free-tier instance hours (750h/month quota). Free web services safely spin down after 15 minutes of inactivity and wake up upon user request.
 
 ---
 

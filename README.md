@@ -25,7 +25,7 @@
 
 ## Overview
 
-The **Notes Management System** is a full-featured web application engineered to facilitate centralized knowledge sharing for students, educators, and academic institutions. Powered by PHP 8.2 and MySQL, the system delivers secure role-based session management, multi-file attachment uploads, chronological revision tracking, and an automated keep-alive daemon ensuring continuous availability.
+The **Notes Management System** is a full-featured web application engineered to facilitate centralized knowledge sharing for students, educators, and academic institutions. Powered by PHP 8.2 and MySQL, the system delivers secure role-based session management, multi-file attachment uploads, chronological revision tracking, and zero-DB health check monitoring.
 
 ---
 
@@ -35,7 +35,7 @@ The **Notes Management System** is a full-featured web application engineered to
 * **Document Management Engine:** Full CRUD (Create, Read, Update, Delete) capability for educational notes and course documentation.
 * **Multi-File Attachment Pipeline:** Support for up to 4 file attachments per document with dedicated replacement pipelines (`changefile1-4.php`).
 * **Public Knowledge Explorer:** Filterable and paginated directory allowing visitors to discover, review, and download open-access study materials.
-* **Operational Keep-Alive Resilience:** Built-in background daemon and lightweight zero-DB health check probe (`/ping.php`) preventing container sleep on free-tier cloud platforms.
+* **Lightweight Health Check Monitoring:** Zero-DB health check probe (`/ping.php`) verifying service availability without database overhead or instance-hour drain.
 * **Responsive Modern UI:** Built with Bootstrap 5 and customized SCSS, fully optimized across desktop, tablet, and mobile browsers.
 
 ---

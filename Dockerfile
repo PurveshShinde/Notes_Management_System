@@ -13,5 +13,5 @@ RUN chmod +x /var/www/html/entrypoint.sh
 # Expose port 80 
 EXPOSE 80
 
-# Launch server with background keep-alive daemon
+# Launch Apache web server
 ENTRYPOINT ["/var/www/html/entrypoint.sh"]

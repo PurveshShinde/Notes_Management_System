@@ -19,10 +19,6 @@ flowchart TD
         HealthEndpoint["Health Check Probe (/ping.php)"]
     end
 
-    subgraph ServiceTier["Background Services Tier"]
-        KeepAliveDaemon["Keep-Alive Daemon (services/keep_alive.php)"]
-    end
-
     subgraph AppTier["Application Logic (PHP 8.2.35)"]
         SessionManager["Session Management ($_SESSION['ocasuid'])"]
         UploadPipeline["Multi-File Attachment Pipeline (MD5 + TS)"]
@@ -35,7 +31,6 @@ flowchart TD
     end
 
     Client -->|HTTPS Requests| WebTier
-    KeepAliveDaemon -->|Heartbeat GET every 480s| HealthEndpoint
     WebTier --> AppTier
     AppTier -->|Secure Queries| DataTier
     AppTier -->|Persist Files| UploadStorage
@@ -55,7 +50,7 @@ flowchart TD
 | **Styling & Assets** | CSS / SCSS | Custom + SASS | Responsive styles, animations, and color schemes |
 | **Client Scripts** | JavaScript | ES6+ & jQuery | Dynamic UI interactions, modals, and client-side validation |
 | **Containerization** | Docker | Multi-stage ready | Standardized container builds with entrypoint automation |
-| **Monitoring** | Keep-Alive Daemon | PHP & Node.js | Automated polling preventing server sleep on Render |
+| **Health Monitoring** | Health Probe | PHP (`/ping.php`) | Zero-DB health check probe for uptime and deploy verification |
 
 ---
 
@@ -73,9 +68,6 @@ Notes Management System/
 ├── includes/                # Shared presentation templates for public views
 │   ├── header.php           # Global top navigation bar and responsive header
 │   └── footer.php           # Global bottom footer, legal copy, and back-to-top
-├── services/                # Background operational workers
-│   ├── keep_alive.php       # PHP cURL-based heartbeat daemon (480s loop)
-│   └── keep_alive.js        # Node.js HTTPS-based heartbeat daemon alternative
 ├── user/                    # Authenticated student/user portal
 │   ├── css/ & js/ & lib/    # Portal-specific styling, charts, and date pickers
 │   ├── folder1/ - folder4/  # Segregated disk storage for uploaded note attachments
@@ -194,29 +186,26 @@ To prevent file collision and malicious path traversal, note uploads adhere to t
 
 ---
 
-## 6. Operational Resilience & Keep-Alive Daemon
+## 6. Health Check Probe & Free Tier Quota Management
 
-Free-tier hosting providers (such as Render) automatically suspend idle containers after 15 minutes of zero incoming HTTP traffic. This causes search engine crawlers (Googlebot) and users to experience long cold-start timeouts or crawl failures.
+Render free-tier hosting provides **750 free instance hours per month** across all web services in a workspace. Services automatically spin down after 15 minutes of inactivity to preserve this monthly quota.
 
-### Keep-Alive Architecture
+### Health Check Architecture
+
+The application exposes a zero-DB health check endpoint at `/ping.php`:
 
 ```mermaid
 sequenceDiagram
     autonumber
-    participant Daemon as Keep-Alive Daemon (services/keep_alive.php)
+    participant Monitor as Health Check / Deploy Probe
     participant Server as Web Server (Apache)
     participant Probe as Health Probe (/ping.php)
 
-    Note over Daemon: Spawned on container startup via entrypoint.sh
-    Daemon->>Daemon: Sleep initial 20s (wait for port 80 bind)
-    loop Every 480 Seconds (8 Minutes)
-        Daemon->>Probe: HTTP GET https://.../ping.php
-        Probe->>Server: Validate lightweight endpoint (No DB overhead)
-        Server-->>Daemon: HTTP 200 OK {"status":"healthy"}
-        Note over Daemon: Activity counter refreshed; prevents container suspension
-    end
+    Monitor->>Probe: HTTP GET /ping.php
+    Probe->>Server: Instantaneous check (Zero DB connections opened)
+    Server-->>Monitor: HTTP 200 OK {"status":"healthy"}
 ```
 
-* **Health Endpoint (`/ping.php`):** Returns an instantaneous `200 OK` JSON response without querying the database, conserving connection pool limits and memory.
-* **Redundancy:** Can be run natively within the container or externally via `services/keep_alive.js` using Node.js.
+* **Health Endpoint (`/ping.php`):** Returns an instantaneous `200 OK` JSON response without querying the database, conserving database connection limits and server memory.
+* **Quota Preservation:** Background keep-alive polling daemons have been decommissioned so the application spins down when inactive, preventing premature exhaustion of workspace instance hours.
 
